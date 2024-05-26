@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>www.mynumber.com</title>
+
+	<style>
+		body{
+			color: white;
+			text-align: center;
+			font-family: arial;
+			padding-top: 150px;
+			padding-bottom: 50px;
+			padding-right: 10px;
+			padding-left: 10px;
+			background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+			background-repeat: no-repeat;
+      		background-attachment: fixed;
+     	 	background-size: cover;  
+		}
+
+
+
+
+
+	</style>
+
+		
+</head>
+<body>
+ 	<h1> Guss My Number</h1>
+ 	<input id="input1">
+ 	<button onclick="start()">Guess</button>
+
+ 	<p id="result1"> Correct or Wrong</p>
+ 	<p id="Score"> Your Score:10 </p>
+
+
+
+	
+
+	<script>
+
+		var gessnum =document.getElementById("input1")
+		var result = document.getElementById("result1")
+		var addScore = document.getElementById("Score")
+
+		var randomnumber = Math.floor(Math.random() * 10 +1)
+		//console.log(randomnumber)
+
+		var yourscore = 10
+
+		function start()
+
+		{
+
+			var enternum = gessnum.value
+
+		if ( randomnumber == enternum)
+		{
+			//console.log("Correct")
+			yourscore = yourscore + 1
+			addScore.textContent = "Score: " + yourscore
+			result.textContent = "Correct"
+			alert("Woow Amazing")
+
+		} 
+
+		else
+		{
+			//console.log("Wrong")
+			yourscore = yourscore - 1
+			result.textContent = "Wrong"
+			addScore.textContent = "Score: " + yourscore
+			alert("Belive Your Self")
+
+		}
+
+	    }
+
+	</script>
+
+</body>
+</html>
